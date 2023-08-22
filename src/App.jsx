@@ -9,10 +9,10 @@ function App() {
   const [pokemon, setPokemon] = useState(null)
   const [pokedex, setPokedex] = useState(null)
 
-  const getPokemon = async (searchTerm) => {
+  const getPokemon = async (search) => {
     try {
       const response = await axios.get(
-        `https://pokeapi.co/api/v2/pokemon/${searchTerm}`
+        `https://pokeapi.co/api/v2/pokemon/${search}`
       );
 
       //set the Pokemon state to the pokemon
@@ -22,10 +22,10 @@ function App() {
     }
   };
 
-  const getPokedex = async (searchTerm) => {
+  const getPokedex = async (search) => {
     try {
       const response = await axios.get(
-        `https://pokeapi.co/api/v2/pokemon-species/${searchTerm}`
+        `https://pokeapi.co/api/v2/pokemon-species/${search}`
       );
 
       //set the Pokedex state to the pokedex
