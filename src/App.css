@@ -46,4 +46,8 @@
 
 #info {
   display: flex;
+  flex-direction: column;
+  border: 2px solid black;
+  width: 200px;
+  margin: 0 auto
 }

@@ -14,7 +14,6 @@ function App() {
       const response = await axios.get(
         `https://pokeapi.co/api/v2/pokemon/${search}`
       );
-
       //set the Pokemon state to the pokemon
       setPokemon(response.data);
     } catch (err) {
@@ -35,6 +34,10 @@ function App() {
     }
   };
 
+  useEffect(() => {
+    getPokemon('pachirisu')
+    getPokedex('pachirisu')
+  }, [])
 
   return (
     <>
