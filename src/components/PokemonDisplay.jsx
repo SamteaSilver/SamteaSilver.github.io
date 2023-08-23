@@ -20,6 +20,7 @@ function PokemonDisplay({ pokemon, pokedex }) {
     }
 
     let categoryNum = 0;
+    // gen 1 to gen 8 is index 7, legends arceus is index 5, gen 9 is index 3 
     function decideCategoryNum() {
         if (pokedex.id >= 1 && pokedex.id <= 898) {
             categoryNum = 7
@@ -34,7 +35,9 @@ function PokemonDisplay({ pokemon, pokedex }) {
     const loaded = () => {
         return (
             <>
+                {/* initialize flavor text number */}
                 {decideFlavorTextNum()}
+                {/* initialize category number */}
                 {decideCategoryNum()}
                 {/* Pokemon types */}
                 {pokemon.types.map((typeEle, index) => {
@@ -47,7 +50,7 @@ function PokemonDisplay({ pokemon, pokedex }) {
                 {/* pokedex entry # */}
                 <h2>Dex number: #{pokedex.id}</h2>
                 {/* official artwork of the pokemon */}
-                <img src={pokemon.sprites.other['official-artwork']['front_default']} />
+                <img src={pokemon.sprites.other['official-artwork']['front_default']} alt={`An official picture of ${pokemon.name}`} />
                 {/* Display the pokedex entry here */}
                 <h2>{pokedex.flavor_text_entries[flavorTextNum].flavor_text}</h2>
                 <div id="info">
