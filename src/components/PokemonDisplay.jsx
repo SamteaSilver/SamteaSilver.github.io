@@ -1,29 +1,41 @@
-import { useEffect } from "react";
-
 function PokemonDisplay({ pokemon, pokedex }) {
-    let num = 0;
+    let flavorTextNum = 0;
     {/* gen 1 to gen 4 is 0th index, gen 5 is 1st index, gen 6 is 6th index, gen 7 is 7th index legends arceus and gen 9 is 0th index */ }
-    function flavorTextNum() {
+    function decideFlavorTextNum() {
         if (pokedex.id >= 1 && pokedex.id <= 493) {
-            num = 0
+            flavorTextNum = 0
         }
         else if (pokedex.id >= 494 && pokedex.id <= 649) {
-            num = 1
+            flavorTextNum = 1
         }
         else if (pokedex.id >= 650 && pokedex.id <= 720) {
-            num = 6
+            flavorTextNum = 6
         }
         else if (pokedex.id >= 721 && pokedex.id <= 898) {
-            num = 7
+            flavorTextNum = 7
         }
         else {
-            num = 0
+            flavorTextNum = 0
         }
     }
+
+    let categoryNum = 0;
+    function decideCategoryNum() {
+        if (pokedex.id >= 1 && pokedex.id <= 898) {
+            categoryNum = 7
+        }
+        else if (pokedex.id >= 899 && pokedex.id <= 905) {
+            categoryNum = 5
+        } else {
+            categoryNum = 3
+        }
+    }
+
     const loaded = () => {
         return (
             <>
-                {flavorTextNum()}
+                {decideFlavorTextNum()}
+                {decideCategoryNum()}
                 {/* Pokemon types */}
                 {pokemon.types.map((typeEle, index) => {
                     return (
@@ -37,13 +49,12 @@ function PokemonDisplay({ pokemon, pokedex }) {
                 {/* official artwork of the pokemon */}
                 <img src={pokemon.sprites.other['official-artwork']['front_default']} />
                 {/* Display the pokedex entry here */}
-                <h2>{pokedex.flavor_text_entries[num].flavor_text}</h2>
+                <h2>{pokedex.flavor_text_entries[flavorTextNum].flavor_text}</h2>
                 <div id="info">
                     <p>Height: ~{Math.round(pokemon.height * 0.328084)} ft </p>
                     <p>Weight: ~{Math.round(pokemon.weight * 0.220462)} lb</p>
 
-                    <p>Category</p>
-                    {/* <p>{pokedex.genera[7].genus}</p> */}
+                    <p>Category: {pokedex.genera[categoryNum].genus}</p>
                     {/* Map over the abilities to display all abilities */}
                     {pokemon.abilities.map((abi, index) => {
                         return (
