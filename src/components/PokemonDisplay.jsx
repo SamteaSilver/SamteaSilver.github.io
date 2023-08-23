@@ -1,12 +1,29 @@
 import { useEffect } from "react";
 
 function PokemonDisplay({ pokemon, pokedex }) {
-    // const num = pokedex.id >= 1 && pokedex.id <= 493 ? 0 : pokedex.id >= 494 && pokedex.id <= 649 ? 1 : pokedex.id >= 650 && pokedex.id <= 898 ? 7 : 0
     let num = 0;
-
+    {/* gen 1 to gen 4 is 0th index, gen 5 is 1st index, gen 6 is 6th index, gen 7 is 7th index legends arceus and gen 9 is 0th index */ }
+    function flavorTextNum() {
+        if (pokedex.id >= 1 && pokedex.id <= 493) {
+            num = 0
+        }
+        else if (pokedex.id >= 494 && pokedex.id <= 649) {
+            num = 1
+        }
+        else if (pokedex.id >= 650 && pokedex.id <= 720) {
+            num = 6
+        }
+        else if (pokedex.id >= 721 && pokedex.id <= 898) {
+            num = 7
+        }
+        else {
+            num = 0
+        }
+    }
     const loaded = () => {
         return (
             <>
+                {flavorTextNum()}
                 {/* Pokemon types */}
                 {pokemon.types.map((typeEle, index) => {
                     return (
@@ -19,8 +36,8 @@ function PokemonDisplay({ pokemon, pokedex }) {
                 <h2>Dex number: #{pokedex.id}</h2>
                 {/* official artwork of the pokemon */}
                 <img src={pokemon.sprites.other['official-artwork']['front_default']} />
-                {/* gen 1 to gen 4 is 0th index, gen 5 is 1st index, gen 6 through gen 8 is 7th index, legends arceus and gen 9 is 0th index */}
-                <h2>{pokedex.flavor_text_entries[0].flavor_text}</h2>
+                {/* Display the pokedex entry here */}
+                <h2>{pokedex.flavor_text_entries[num].flavor_text}</h2>
                 <div id="info">
                     <p>Height: ~{Math.round(pokemon.height * 0.328084)} ft </p>
                     <p>Weight: ~{Math.round(pokemon.weight * 0.220462)} lb</p>

@@ -34,6 +34,7 @@ function App() {
     }
   };
 
+  //set the default pokemon to be Pachirisu
   useEffect(() => {
     getPokemon('pachirisu')
     getPokedex('pachirisu')
