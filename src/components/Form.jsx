@@ -13,8 +13,8 @@ function Form(props) {
     const handleSubmit = (event) => {
 
         event.preventDefault();
-        props.pokemonSearch(formData.searchTerm);
-        props.pokedexSearch(formData.searchTerm)
+        props.pokemonSearch(formData.searchTerm.toLowerCase());
+        props.pokedexSearch(formData.searchTerm.toLowerCase())
     };
 
     return (
