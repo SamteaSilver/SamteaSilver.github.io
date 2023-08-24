@@ -12,7 +12,7 @@ This is a website that lets users search up information about Pokemon. The infor
 
 ## Installation
 
-The website is up on {website link} and {github link}
+The website is up on https://pokemon-search-ttanaka.netlify.app/
 
 ## API used
 
@@ -30,6 +30,8 @@ I really struggled with displaying the different Pokedex entry description since
 - Display a fun fact about each pokemon somehow
 
 - Display the shiny form of each pokemon using toggle ?
+
+- Some Pokemon cannot be looked up (Enamorus) with their name, they need to be looked up using their "official name" 
 
 
 

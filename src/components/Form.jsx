@@ -25,7 +25,7 @@ function Form(props) {
                     onChange={handleChange}
                     value={formData.searchTerm}
                     name="searchTerm"
-                    placeholder='Enter pokemon in lower case'
+                    placeholder='Enter Pokemon name'
                 />
                 <input type="submit" value="Submit" />
             </form>
