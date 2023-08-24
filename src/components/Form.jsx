@@ -10,9 +10,9 @@ function Form(props) {
         setFormData({ ...formData, [event.target.name]: event.target.value });
     };
 
-    const handleSubmit = (evt) => {
+    const handleSubmit = (event) => {
 
-        evt.preventDefault();
+        event.preventDefault();
         props.pokemonSearch(formData.searchTerm);
         props.pokedexSearch(formData.searchTerm)
     };
@@ -25,6 +25,7 @@ function Form(props) {
                     onChange={handleChange}
                     value={formData.searchTerm}
                     name="searchTerm"
+                    placeholder='Enter pokemon in lower case'
                 />
                 <input type="submit" value="Submit" />
             </form>

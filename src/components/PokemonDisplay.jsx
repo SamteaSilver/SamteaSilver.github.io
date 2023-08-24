@@ -39,18 +39,20 @@ function PokemonDisplay({ pokemon, pokedex }) {
                 {decideFlavorTextNum()}
                 {/* initialize category number */}
                 {decideCategoryNum()}
+
+
+                {/* name of the pokemon */}
+                <h1>{pokemon.name.charAt(0).toUpperCase() + pokemon.name.slice(1)}</h1>
+                {/* official artwork of the pokemon */}
+                <img src={pokemon.sprites.other['official-artwork']['front_default']} alt={`An official picture of ${pokemon.name}`} />
+                {/* pokedex entry # */}
+                <h2>Dex number: #{pokedex.id}</h2>
                 {/* Pokemon types */}
                 {pokemon.types.map((typeEle, index) => {
                     return (
-                        <div key={index} className={typeEle.type.name}>{typeEle.type.name}</div>
+                        <div key={index} className={typeEle.type.name}>{typeEle.type.name.charAt(0).toUpperCase() + typeEle.type.name.slice(1)}</div>
                     )
                 })}
-                {/* name of the pokemon */}
-                <h1>{pokemon.name.charAt(0).toUpperCase() + pokemon.name.slice(1)}</h1>
-                {/* pokedex entry # */}
-                <h2>Dex number: #{pokedex.id}</h2>
-                {/* official artwork of the pokemon */}
-                <img src={pokemon.sprites.other['official-artwork']['front_default']} alt={`An official picture of ${pokemon.name}`} />
                 {/* Display the pokedex entry here */}
                 <h2>{pokedex.flavor_text_entries[flavorTextNum].flavor_text}</h2>
                 <div id="info">
@@ -71,7 +73,7 @@ function PokemonDisplay({ pokemon, pokedex }) {
     }
 
     const loading = () => {
-        <h1>No pokemon to display.</h1>
+        <h1>No pokemon to display yet</h1>
     }
 
 

@@ -3,45 +3,11 @@
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
+  background-color: #FFF6DC;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
-}
-
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
-}
-
-.card {
-  padding: 2em;
-}
-
-.read-the-docs {
-  color: #888;
+body {
+  background-color: lightsteelblue;
 }
 
 #info {
@@ -49,5 +15,155 @@
   flex-direction: column;
   border: 2px solid black;
   width: 200px;
-  margin: 0 auto
+  margin: 0 auto;
+  background-color: wheat;
+}
+
+.bug {
+  border: 2px solid black;
+  width: 100px;
+  margin: 0 auto;
+  background-color: #A6B91A;
+  display: inline-block;
+}
+
+.dark {
+  border: 2px solid black;
+  width: 100px;
+  margin: 0 auto;
+  background-color: #705746;
+  color: white;
+  display: inline-block;
+}
+
+.dragon {
+  border: 2px solid black;
+  width: 100px;
+  margin: 0 auto;
+  background-color: #6F35FC;
+  color: white;
+  display: inline-block;
+}
+
+.electric {
+  border: 2px solid black;
+  width: 100px;
+  margin: 0 auto;
+  background-color: #F7D02C;
+}
+
+.fairy {
+  border: 2px solid black;
+  width: 100px;
+  margin: 0 auto;
+  background-color: #D685AD;
+  display: inline-block;
+}
+
+.fighting {
+  border: 2px solid black;
+  width: 100px;
+  margin: 0 auto;
+  background-color: #C22E28;
+  display: inline-block;
+}
+
+.fire {
+  border: 2px solid black;
+  width: 100px;
+  margin: 0 auto;
+  background-color: #EE8130;
+  display: inline-block;
+}
+
+
+.flying {
+  border: 2px solid black;
+  width: 100px;
+  margin: 0 auto;
+  background-color: #A98FF3;
+  display: inline-block;
+
+}
+
+.ghost {
+  border: 2px solid black;
+  width: 100px;
+  margin: 0 auto;
+  background-color: #735797;
+  color: white;
+  display: inline-block;
+}
+
+.grass {
+  border: 2px solid black;
+  width: 100px;
+  margin: 0 auto;
+  background-color: #7AC74C;
+  display: inline-block;
+}
+
+.ground {
+  border: 2px solid black;
+  width: 100px;
+  margin: 0 auto;
+  background-color: #E2BF65;
+  display: inline-block;
+}
+
+.ice {
+  border: 2px solid black;
+  width: 100px;
+  margin: 0 auto;
+  background-color: #96D9D6;
+  display: inline-block;
+}
+
+.normal {
+  border: 2px solid black;
+  width: 100px;
+  margin: 0 auto;
+  background-color: #A8A77A;
+  display: inline-block;
+}
+
+.poison {
+  border: 2px solid black;
+  width: 100px;
+  margin: 0 auto;
+  background-color: #A33EA1;
+  color: white;
+  display: inline-block;
+}
+
+.psychic {
+  border: 2px solid black;
+  width: 100px;
+  margin: 0 auto;
+  background-color: #F95587;
+  display: inline-block;
+}
+
+.rock {
+  border: 2px solid black;
+  width: 100px;
+  margin: 0 auto;
+  background-color: #B6A136;
+  display: inline-block;
+}
+
+.steel {
+  border: 2px solid black;
+  width: 100px;
+  margin: 0 auto;
+  background-color: #B7B7CE;
+  display: inline-block;
+}
+
+.water {
+  border: 2px solid black;
+  width: 100px;
+  margin: 0 auto;
+  background-color: #6390F0;
+  display: inline-block;
 }
