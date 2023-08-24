@@ -2,10 +2,10 @@ function PokemonDisplay({ pokemon, pokedex }) {
     let flavorTextNum = 0;
     {/* gen 1 to gen 4 is 0th index, gen 5 is 1st index, gen 6 is 6th index, gen 7 is 7th index legends arceus and gen 9 is 0th index */ }
     function decideFlavorTextNum() {
-        if (pokedex.id >= 1 && pokedex.id <= 493) {
+        if (pokedex.id >= 1 && pokedex.id <= 493 && pokedex.id !== 492) {
             flavorTextNum = 0
         }
-        else if (pokedex.id >= 494 && pokedex.id <= 649) {
+        else if (pokedex.id >= 494 && pokedex.id <= 649 || pokedex.id === 492) {
             flavorTextNum = 1
         }
         else if (pokedex.id >= 650 && pokedex.id <= 720) {
@@ -42,7 +42,7 @@ function PokemonDisplay({ pokemon, pokedex }) {
 
 
                 {/* name of the pokemon */}
-                <h1>{pokemon.name.charAt(0).toUpperCase() + pokemon.name.slice(1)}</h1>
+                <h1>{pokedex.name.charAt(0).toUpperCase() + pokedex.name.slice(1)}</h1>
                 {/* official artwork of the pokemon */}
                 <img src={pokemon.sprites.other['official-artwork']['front_default']} alt={`An official picture of ${pokemon.name}`} />
                 {/* pokedex entry # */}

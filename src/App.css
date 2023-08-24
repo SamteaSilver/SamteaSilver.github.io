@@ -50,6 +50,7 @@ body {
   width: 100px;
   margin: 0 auto;
   background-color: #F7D02C;
+  display: inline-block;
 }
 
 .fairy {

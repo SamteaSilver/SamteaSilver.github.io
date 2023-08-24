@@ -24,6 +24,7 @@ https://pokeapi.co/api/v2/pokemon-species/{name or id}/ endpoints for this proje
 I really struggled with displaying the different Pokedex entry description since with each generation of Pokemon the order of the languages differs. I initially tried to use ternary to change the placeholder variable based on the pokedex id but after getting guidance from my instructor, I learned that a simple function would better suit this scenario. 
 
 ## Improvements
+- Some Pokemon can be looked up but some information will be missing (The picture and the mapped attributes)
 
 - Display ability info on hover
 
@@ -31,7 +32,7 @@ I really struggled with displaying the different Pokedex entry description since
 
 - Display the shiny form of each pokemon using toggle ?
 
-- Some Pokemon cannot be looked up (Enamorus) with their name, they need to be looked up using their "official name" 
+
 
 
 
